@@ -6,7 +6,7 @@ A Flutter project demonstrating state management using the Cubit pattern with th
 
 - State management using Cubit
 - Clean architecture pattern
-- Example counter application
+- Example auth screen application
 - Easy to understand and extend
 
 ## Prerequisites
@@ -45,8 +45,6 @@ lib/
 ## Dependencies
 
 - `flutter_bloc`: ^8.1.3
-- `equatable`: ^2.0.5
-- `bloc`: ^8.1.2
 
 ## Resources
 
