@@ -15,7 +15,6 @@ class VirfiCubit extends Cubit<VirfiState> {
   void validateFields({
     required String code,
   }) {
-    // تفريغ جميع الأخطاء قبل التحقق
     emit(VirfiInitial());
 
     if (code.isEmpty) {

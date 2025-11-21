@@ -1,0 +1,85 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task1_cubit/core/widget/Info_continer.dart';
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    Color on = Theme.of(context).colorScheme.primary;
+    Color off = Theme.of(context).colorScheme.tertiary;
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Profile'),
+        centerTitle: true,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(16.w, 0, 16.w, 50.h),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Spacer(),
+            Center(
+              child: Container(
+                padding: EdgeInsets.all(3), // سماكة الإطار
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors
+                              .teal // لون الإطار في الدارك
+                        : Colors.blue, // لون الإطار في اللايت
+                    width: 3,
+                  ),
+                ),
+                child: CircleAvatar(
+                  radius: 80, // حجم الصورة
+                  backgroundImage: AssetImage("assets/mock_data/profile.png"),
+                ),
+              ),
+            ),
+            Spacer(),
+            SizedBox(height: 10.h),
+            InfoContiner(
+              title: 'name',
+              info: 'Mohammad Ali Alali',
+              width1: 100.w,
+              width2: 230,
+              color: on,
+              textStyle: TextStyle(color: off),
+            ),
+            SizedBox(height: 10.h),
+            InfoContiner(
+              title: 'Bearth Day ',
+              info: '27/7/2003',
+              width1: 150.w,
+              width2: 185,
+              color: on,
+              textStyle: TextStyle(color: off),
+            ),
+            SizedBox(height: 10.h),
+            InfoContiner(
+              title: 'Localtion',
+              info: 'Damascus Syria',
+              width1: 100.w,
+              width2: 230,
+              color: on,
+              textStyle: TextStyle(color: off),
+            ),
+            SizedBox(height: 10.h),
+            InfoContiner(
+              title: 'Email',
+              info: 'mohmad287@gmail.com',
+              width1: 100.w,
+              width2: 230,
+              color: on,
+              textStyle: TextStyle(color: off),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

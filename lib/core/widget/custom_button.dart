@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task1_cubit/core/color.dart';
-import 'package:task1_cubit/core/responsive.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -40,7 +40,7 @@ class CustomButton extends StatelessWidget {
               textStyle ??
               TextStyle(
                 height: 3.3.h,
-                fontSize: 18.f,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),

@@ -1,6 +1,6 @@
 // lib/widgets/custom_text_field.dart
 import 'package:flutter/material.dart';
-import 'package:task1_cubit/core/responsive.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -28,13 +28,13 @@ class CustomTextField extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: isError ? Colors.red : Colors.grey,
-              width: 1.3.e,
+              width: 1.3.h,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: isError ? Colors.red : Colors.green,
-              width: 1.5.e,
+              width: 1.5.h,
             ),
           ),
         ),

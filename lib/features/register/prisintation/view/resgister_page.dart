@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task1_cubit/core/font.dart';
 import 'package:task1_cubit/core/navigation.dart';
-import 'package:task1_cubit/core/responsive.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task1_cubit/features/register/prisintation/manager/register_cubit.dart';
 import 'package:task1_cubit/core/widget/custom_button.dart';
 import 'package:task1_cubit/core/widget/custom_password_field.dart';

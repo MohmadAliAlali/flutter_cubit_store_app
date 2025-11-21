@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
       if (mounted) {
-        Navigation.navigateAndRemove(context, '/login');
+        Navigation.navigateAndRemove(context, '/navbar');
         // Navigator.push(
         //   context,
         //   MaterialPageRoute(

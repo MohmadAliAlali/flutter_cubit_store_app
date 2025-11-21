@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task1_cubit/core/responsive.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomPasswordField extends StatefulWidget {
   final String labelText;

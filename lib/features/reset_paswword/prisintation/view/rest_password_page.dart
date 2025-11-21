@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task1_cubit/core/font.dart';
 import 'package:task1_cubit/core/navigation.dart';
-import 'package:task1_cubit/core/responsive.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task1_cubit/features/reset_paswword/prisintation/manager/reset_password_cubit.dart';
 import 'package:task1_cubit/core/widget/custom_button.dart';
 import 'package:task1_cubit/core/widget/custom_password_field.dart';
@@ -54,7 +54,7 @@ class RestPasswordPage extends StatelessWidget {
                     ),
                     child: IntrinsicHeight(
                       child: Padding(
-                        padding: EdgeInsets.all(24.0.e),
+                        padding: EdgeInsets.all(24.0.h),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.center,
