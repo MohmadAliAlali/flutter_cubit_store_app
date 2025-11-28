@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:task1_cubit/core/color.dart';
+import 'package:task1_cubit/core/style/color.dart';
 import 'package:task1_cubit/core/navigation.dart';
 // import 'package:task1_cubit/features/test/presentation/view/manager/user_cubit/user_cubit.dart';
 // import 'package:task1_cubit/features/test/presentation/view/user_page.dart';

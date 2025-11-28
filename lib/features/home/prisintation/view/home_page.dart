@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task1_cubit/core/navigation.dart';
 import 'package:task1_cubit/core/widget/list_view_iem.dart';
 import 'package:task1_cubit/features/home/prisintation/manager/home_cubit.dart';
 import 'package:task1_cubit/features/home/prisintation/manager/home_state.dart';
@@ -55,22 +56,27 @@ class HomePage extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 10),
-
-                  Expanded(
-                    child: Padding(
-                      padding: EdgeInsetsGeometry.all(10.w),
-                      child: ListView.builder(
-                        itemCount: state.items.length,
-                        itemBuilder: (context, index) {
-                          return ListViewIem(
-                            title: Image.asset('assets/mock_data/profile.png'),
-                            info: state.items[index],
-                            width2: 250.w,
-                          );
-                        },
-                      ),
-                    ),
+                  TextButton(
+                    onPressed: () {
+                      Navigation.navigateToScreen(context, '/listProduct');
+                    },
+                    child: Text('All products'),
                   ),
+                  // Expanded(
+                  //   child: Padding(
+                  //     padding: EdgeInsetsGeometry.all(10.w),
+                  //     child: ListView.builder(
+                  //       itemCount: state.items.length,
+                  //       itemBuilder: (context, index) {
+                  //         return ListViewIem(
+                  //           title: Image.asset('assets/mock_data/profile.png'),
+                  //           info: state.items[index],
+                  //           width2: 250.w,
+                  //         );
+                  //       },
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               );
             }

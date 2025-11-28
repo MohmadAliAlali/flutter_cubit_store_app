@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task1_cubit/core/color.dart';
+import 'package:task1_cubit/core/style/color.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class InfoContiner extends StatelessWidget {

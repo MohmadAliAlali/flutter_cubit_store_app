@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:task1_cubit/core/color.dart';
+import 'package:task1_cubit/core/style/color.dart';
 
 class Navigation {
+
+    static void navigateToScreen(BuildContext context, String screen) {
+    Navigator.of(context, rootNavigator: true).pushNamed(screen);
+  }
   static void navigateTo(BuildContext context, String screen) {
     Navigator.pushNamed(context, screen);
   }

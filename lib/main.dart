@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task1_cubit/core/route/route.dart';
-import 'package:task1_cubit/core/them.dart';
+import 'package:task1_cubit/core/style/them.dart';
 import 'package:task1_cubit/features/settings/data/prisintation/manager/settings_cubit.dart';
 
 void main() {

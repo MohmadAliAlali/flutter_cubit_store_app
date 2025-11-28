@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task1_cubit/core/font.dart';
+import 'package:task1_cubit/core/style/font.dart';
 import 'package:task1_cubit/core/widget/bottun_selected.dart';
 import 'package:task1_cubit/features/settings/data/prisintation/manager/settings_cubit.dart';
 

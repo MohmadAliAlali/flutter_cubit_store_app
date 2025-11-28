@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task1_cubit/core/color.dart';
+import 'package:task1_cubit/core/style/color.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ListViewIem extends StatelessWidget {
@@ -31,7 +31,7 @@ class ListViewIem extends StatelessWidget {
         Container(
           width: width1?.w,
           padding: EdgeInsets.all(4.w),
-          height: height?.h ?? 60.h,
+          height: height?.h ?? 70.h,
           decoration: BoxDecoration(
             border: Border.all(color: color ?? TaskColor.lightGreen, width: 2),
             borderRadius: BorderRadius.circular(borderRadius?.r ?? 10.r),
@@ -40,24 +40,52 @@ class ListViewIem extends StatelessWidget {
         ),
         Container(
           width: width2?.w,
-          margin: EdgeInsets.all(8.w),
+          margin: EdgeInsets.all(5.w),
           padding: EdgeInsets.all(8.w),
-          height: height?.h ?? 60.h,
+          height: height?.h ?? 70.h,
           decoration: BoxDecoration(
             border: Border.all(color: color ?? TaskColor.lightGreen, width: 2),
             borderRadius: BorderRadius.circular(borderRadius?.r ?? 10.r),
           ),
-          child: Center(
-            child: Text(
-              info,
-              style:
-                  textStyle ??
-                  TextStyle(
-                    color: color ?? TaskColor.lightGreen,
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    info,
+                    style:
+                        textStyle ??
+                        TextStyle(
+                          color: color ?? TaskColor.lightGreen,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
                   ),
-            ),
+                  Text(
+                    info,
+                    style:
+                        textStyle ??
+                        TextStyle(
+                          color: color ?? TaskColor.lightGreen,
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                  ),
+                ],
+              ),
+              Text(
+                ' 10,0\$',
+                style:
+                    textStyle ??
+                    TextStyle(
+                      color: color ?? TaskColor.lightGreen,
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+              ),
+            ],
           ),
         ),
       ],

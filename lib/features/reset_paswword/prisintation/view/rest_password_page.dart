@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task1_cubit/core/font.dart';
+import 'package:task1_cubit/core/style/font.dart';
 import 'package:task1_cubit/core/navigation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task1_cubit/features/reset_paswword/prisintation/manager/reset_password_cubit.dart';

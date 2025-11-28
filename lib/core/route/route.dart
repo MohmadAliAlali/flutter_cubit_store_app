@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:task1_cubit/features/home/prisintation/view/home_page.dart';
 import 'package:task1_cubit/features/login/prisintation/view/login_page.dart';
 import 'package:task1_cubit/features/navbar/prisintation/view/navbar_page.dart';
+import 'package:task1_cubit/features/product_info/prisintation/view/product_info.dart';
+import 'package:task1_cubit/features/product_list/prisintation/view/list_product.dart';
 import 'package:task1_cubit/features/profile/prisintation/view/profile_page.dart';
 import 'package:task1_cubit/features/register/prisintation/view/resgister_page.dart';
 import 'package:task1_cubit/features/reset_paswword/prisintation/view/rest_password_page.dart';
@@ -21,6 +23,8 @@ abstract final class AppRoutes {
   static const String profile = '/profile';
   static const String settings = '/settings';
   static const String navBar = '/navbar';
+  static const String listProduct = '/listProduct';
+  static const String infoProduct = '/infoProduct';
 
   static final Map<String, WidgetBuilder> routes = {
     splash: (_) => const SplashPage(),
@@ -30,8 +34,10 @@ abstract final class AppRoutes {
     reestPassword: (_) => RestPasswordPage(),
     user: (_) => UsersPage(),
     home: (_) => const HomePage(),
-    profile: (_) =>  ProfilePage(),
+    profile: (_) => ProfilePage(),
     settings: (_) => const SettingsPage(),
-    navBar : (_) => NavbarScreen(),
+    navBar: (_) => NavbarScreen(),
+    listProduct: (_) => const ListProduct(),
+    infoProduct: (_) => const ProductInfoPage(),
   };
 }

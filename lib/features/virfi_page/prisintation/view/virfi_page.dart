@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task1_cubit/core/font.dart';
+import 'package:task1_cubit/core/style/font.dart';
 import 'package:task1_cubit/core/navigation.dart';
 import 'package:task1_cubit/core/widget/custom_button.dart';
 import 'package:task1_cubit/core/widget/custom_text_field.dart';
