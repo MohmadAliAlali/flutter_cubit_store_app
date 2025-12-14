@@ -19,10 +19,11 @@ Widget buildList() {
           padding:  EdgeInsets.only(
             left: 5,
             right: 5,
-            top: 64.h, // ✅ مسافة إضافية أعلى أول عنصر
-            bottom: 100.h, // ✅ مسافة إضافية أسفل آخر عنصر
+            top: 64.h, 
+            bottom: 100.h, 
           ),
           itemCount: state.products.length,
+          // scrollDirection: Axis.vertical,
           separatorBuilder: (_, __) => const SizedBox(height: 8),
           itemBuilder: (context, index) {
             final product = state.products[index];

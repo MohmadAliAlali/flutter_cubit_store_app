@@ -4,7 +4,7 @@ import 'package:task1_cubit/features/product_info/data/product_info_model.dart';
 
 part 'list_product_state.dart';
 
-enum Filter { none, priceRange, category }
+enum Filter { none, priceRange, category, rate }
 
 enum Category { all, pizza, burger, pasta, chicken, tacos }
 
@@ -33,6 +33,7 @@ class ListCubit extends Cubit<ListProductState> {
 
       _original = [
         ProductInfoModel(
+          rate: 3,
           title: "Pizza Margherita",
           price: 12.99,
           image: "assets/mock_data/profile.png",
@@ -41,34 +42,43 @@ class ListCubit extends Cubit<ListProductState> {
           category: Category.pizza,
         ),
         ProductInfoModel(
+          rate: 2.9,
           title: "Cheese Burger",
           price: 9.50,
           image: "assets/mock_data/profile.png",
-          description: "Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizzaBeef burger Classic Italian pizza",
+          description:
+              "Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizzaBeef burger Classic Italian pizza",
           category: Category.burger,
         ),
         ProductInfoModel(
+          rate: 4,
           title: "Creamy Pasta",
           price: 14.25,
           image: "assets/mock_data/profile.png",
-          description: "Creamy Alfredo pastaCreamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo paslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pasta",
+          description:
+              "Creamy Alfredo pastaCreamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo paslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pasta",
           category: Category.pasta,
         ),
         ProductInfoModel(
+          rate: 4.2,
           title: "Fried Chicken",
           price: 11.75,
           image: "assets/mock_data/profile.png",
-          description: "Crispy fried chicken Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasttacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo past",
+          description:
+              "Crispy fried chicken Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasttacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo past",
           category: Category.chicken,
         ),
         ProductInfoModel(
+          rate: 1,
           title: "Mexican Tacos",
           price: 10.00,
           image: "assets/mock_data/profile.png",
-          description: "Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas",
+          description:
+              "Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas",
           category: Category.tacos,
         ),
-                ProductInfoModel(
+        ProductInfoModel(
+          rate: 2,
           title: "Pizza Margherita",
           price: 12.99,
           image: "assets/mock_data/profile.png",
@@ -77,34 +87,43 @@ class ListCubit extends Cubit<ListProductState> {
           category: Category.pizza,
         ),
         ProductInfoModel(
+          rate: 2.3,
           title: "Cheese Burger",
           price: 9.50,
           image: "assets/mock_data/profile.png",
-          description: "Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizzaBeef burger Classic Italian pizza",
+          description:
+              "Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizzaBeef burger Classic Italian pizza",
           category: Category.burger,
         ),
         ProductInfoModel(
+          rate: 5,
           title: "Creamy Pasta",
           price: 14.25,
           image: "assets/mock_data/profile.png",
-          description: "Creamy Alfredo pastaCreamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo paslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pasta",
+          description:
+              "Creamy Alfredo pastaCreamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo paslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pasta",
           category: Category.pasta,
         ),
         ProductInfoModel(
+          rate: 4,
           title: "Fried Chicken",
           price: 11.75,
           image: "assets/mock_data/profile.png",
-          description: "Crispy fried chicken Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasttacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo past",
+          description:
+              "Crispy fried chicken Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasttacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo past",
           category: Category.chicken,
         ),
         ProductInfoModel(
+          rate: 3.5,
           title: "Mexican Tacos",
           price: 10.00,
           image: "assets/mock_data/profile.png",
-          description: "Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas",
+          description:
+              "Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas",
           category: Category.tacos,
         ),
-                ProductInfoModel(
+        ProductInfoModel(
+          rate: 4.9,
           title: "Pizza Margherita",
           price: 12.99,
           image: "assets/mock_data/profile.png",
@@ -113,31 +132,39 @@ class ListCubit extends Cubit<ListProductState> {
           category: Category.pizza,
         ),
         ProductInfoModel(
+          rate: 5,
           title: "Cheese Burger",
           price: 9.50,
           image: "assets/mock_data/profile.png",
-          description: "Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizzaBeef burger Classic Italian pizza",
+          description:
+              "Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizza Beef burger Classic Italian pizzaBeef burger Classic Italian pizza",
           category: Category.burger,
         ),
         ProductInfoModel(
+          rate: 2.5,
           title: "Creamy Pasta",
           price: 14.25,
           image: "assets/mock_data/profile.png",
-          description: "Creamy Alfredo pastaCreamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo paslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pasta",
+          description:
+              "Creamy Alfredo pastaCreamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo paslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pasta",
           category: Category.pasta,
         ),
         ProductInfoModel(
+          rate: 4,
           title: "Fried Chicken",
           price: 11.75,
           image: "assets/mock_data/profile.png",
-          description: "Crispy fried chicken Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasttacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo past",
+          description:
+              "Crispy fried chicken Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasttacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo past",
           category: Category.chicken,
         ),
         ProductInfoModel(
+          rate: 3.2,
           title: "Mexican Tacos",
           price: 10.00,
           image: "assets/mock_data/profile.png",
-          description: "Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas",
+          description:
+              "Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas Soft tacoslfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pasta Creamy Alfredo pastaCreamy Alfredo pas",
           category: Category.tacos,
         ),
       ];
@@ -148,6 +175,10 @@ class ListCubit extends Cubit<ListProductState> {
     }
   }
 
+  List<ProductInfoModel> get filteredByRate =>
+      _original.where((p) => p.rate >= 4).toList();
+
+  List<ProductInfoModel> get allProducts => _original;
   /* تغيير نطاق السعر */
   void setPriceRange(double min, double max) {
     _currentFilter = Filter.priceRange;
@@ -156,14 +187,17 @@ class ListCubit extends Cubit<ListProductState> {
     _applyFilter();
   }
 
-  /* اختيار الفئة */
+  void grtRate() {
+    _currentFilter = Filter.rate;
+    _applyFilter();
+  }
+
   void setCategory(Category c) {
     _currentFilter = Filter.category;
     _selectedCategory = c;
     _applyFilter();
   }
 
-  /* إلغاء أي فلتر */
   void clearFilter() {
     _currentFilter = Filter.none;
     _selectedCategory = Category.all;
@@ -172,22 +206,22 @@ class ListCubit extends Cubit<ListProductState> {
     _applyFilter();
   }
 
-  /* التطبيق الفعلي */
   void _applyFilter() {
     var filtered = List.of(_original);
 
-    /* فلترة الفئة */
-    if (_selectedCategory != Category.all) {
-      filtered = filtered
-          .where((p) => p.category == _selectedCategory)
-          .toList();
-    }
-
-    /* فلترة النطاق السعري */
-    if (_currentFilter == Filter.priceRange) {
-      filtered = filtered
-          .where((p) => p.price >= _minPrice && p.price <= _maxPrice)
-          .toList();
+    if (_currentFilter == Filter.rate) {
+      filtered = filtered.where((p) => p.rate >= 4).toList();
+    } else {
+      if (_selectedCategory != Category.all) {
+        filtered = filtered
+            .where((p) => p.category == _selectedCategory)
+            .toList();
+      }
+      if (_currentFilter == Filter.priceRange) {
+        filtered = filtered
+            .where((p) => p.price >= _minPrice && p.price <= _maxPrice)
+            .toList();
+      }
     }
 
     emit(ListLoaded(products: filtered));

@@ -6,7 +6,8 @@ import 'package:task1_cubit/core/storage/hive_manager.dart';
 import 'package:task1_cubit/core/style/them.dart';
 import 'package:task1_cubit/features/cart/prisintation/manager/cart_cubit.dart';
 import 'package:task1_cubit/features/favourites/prisintation/manager/favourites_cubit.dart';
-import 'package:task1_cubit/features/product_list/prisintation/manager/list_product_cubit.dart' show ListCubit;
+import 'package:task1_cubit/features/product_list/prisintation/manager/list_product_cubit.dart'
+    show ListCubit;
 import 'package:task1_cubit/features/settings/data/prisintation/manager/settings_cubit.dart';
 
 void main() async {
@@ -17,7 +18,7 @@ void main() async {
     MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => SettingsCubit()),
-        BlocProvider(create: (_) => ListCubit()),
+        BlocProvider(create: (_) => ListCubit()..loadListContent()),
         BlocProvider(create: (_) => CartCubit()),
         BlocProvider(create: (_) => FavouriteCubit()),
       ],

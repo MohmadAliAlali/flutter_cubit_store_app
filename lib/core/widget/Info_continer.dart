@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:task1_cubit/core/style/color.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,52 +28,68 @@ class InfoContiner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          width: width1?.w,
-          padding: EdgeInsets.all(8.w),
-          height: height?.h ?? 48.h,
-          decoration: BoxDecoration(
-            border: Border.all(color: color ?? TaskColor.lightGreen, width: 2),
-            borderRadius: BorderRadius.circular(borderRadius?.r ?? 10.r),
-          ),
-          child: Center(
-            child: Text(
-              title,
-              style:
-                  textStyle ??
-                  TextStyle(
-                    color: color ?? TaskColor.lightGreen,
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                  ),
+    return
+    ClipRRect(
+      borderRadius: BorderRadius.circular(16.r),
+      child:
+     BackdropFilter(
+      filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
+      child: Row(
+        children: [
+          Container(
+            width: width1?.w,
+            padding: EdgeInsets.all(8.r),
+            margin: EdgeInsets.all(2.r),
+            height: height?.h ?? 48.h,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: color ?? TaskColor.lightGreen,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(borderRadius?.r ?? 10.r),
+            ),
+            child: Center(
+              child: Text(
+                title,
+                style:
+                    textStyle ??
+                    TextStyle(
+
+                      color:  Theme.of(context).colorScheme.tertiary,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
             ),
           ),
-        ),
-        SizedBox(width: 5.w),
-        Container(
-          width: width2?.w,
-          padding: EdgeInsets.all(8.w),
-          height: height?.h ?? 48.h,
-          decoration: BoxDecoration(
-            border: Border.all(color: color ?? TaskColor.lightGreen, width: 2),
-            borderRadius: BorderRadius.circular(borderRadius?.r ?? 10.r),
-          ),
-          child: Center(
-            child: Text(
-              info,
-              style:
-                  textStyle ??
-                  TextStyle(
-                    color: color ?? TaskColor.lightGreen,
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                  ),
+          SizedBox(width: 5.w),
+          Container(
+            width: width2?.w,
+            padding: EdgeInsets.all(8.w),
+            height: height?.h ?? 48.h,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: color ?? TaskColor.lightGreen,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(borderRadius?.r ?? 10.r),
+            ),
+            child: Center(
+              child: Text(
+                info,
+                style:
+                    textStyle ??
+                    TextStyle(
+                      color: Theme.of(context).colorScheme.tertiary,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
+     )
     );
   }
 }

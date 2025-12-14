@@ -4,6 +4,7 @@ class ProductInfoModel {
   final String description;
   final Enum category;
   final double price;
+  final double rate;
   final double? discountedPrice;
 
   ProductInfoModel({
@@ -12,6 +13,7 @@ class ProductInfoModel {
     required this.description,
     required this.category,
     required this.price,
+    required this.rate,
     this.discountedPrice,
   });
 

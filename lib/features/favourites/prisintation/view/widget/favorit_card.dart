@@ -14,10 +14,10 @@ Widget glassFavCard(ProductInfoModel p, BuildContext context) {
       child: Container(
         padding: EdgeInsets.all(12.w),
         decoration: BoxDecoration(
-          color: Colors.white.withAlpha(8),
-          borderRadius: BorderRadius.circular(24.r),
+          color: Theme.of(context).colorScheme.tertiary.withAlpha(8),
+          borderRadius: BorderRadius.circular(16.r),
           border: Border.all(
-            color: Colors.white.withAlpha(20),
+            color: Theme.of(context).colorScheme.tertiary.withAlpha(20),
             width: 1.2.w,
           ),
         ),
@@ -42,7 +42,7 @@ Widget glassFavCard(ProductInfoModel p, BuildContext context) {
                     style: TextStyle(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w600,
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.tertiary,
                     ),
                   ),
                   SizedBox(height: 4.h),
