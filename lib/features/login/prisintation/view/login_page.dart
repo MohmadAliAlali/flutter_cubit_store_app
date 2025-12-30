@@ -95,14 +95,16 @@ class LoginPage extends StatelessWidget {
                                     );
                                   }
                                   if (state is LoginSuccess) {
-                                    Navigation.noteficationSucs(
-                                      context,
-                                      'login successful!',
-                                    );
-                                    Navigation.navigateAndRemove(
-                                      context,
-                                      '/navbar',
-                                    );
+                                    {
+                                      Navigation.noteficationSucs(
+                                        context,
+                                        'login successful!',
+                                      );
+                                      Navigation.navigateAndRemove(
+                                        context,
+                                        '/navbar',
+                                      );
+                                    }
                                   }
                                 },
                                 child: CustomButton(

@@ -8,6 +8,7 @@ Widget glassButton({
   required VoidCallback onTap,
   required BuildContext context,
   double? width,
+  Color? color,
 }) {
   return ClipRRect(
     borderRadius: BorderRadius.circular(16.r),
@@ -21,7 +22,7 @@ Widget glassButton({
           width: width ?? null,   
           margin: EdgeInsets.symmetric(vertical: 5.h),
           decoration: BoxDecoration(
-            color: Theme.of(context).scaffoldBackgroundColor.withAlpha(7),
+            color:color ?? Theme.of(context).scaffoldBackgroundColor.withAlpha(7),
             borderRadius: BorderRadius.circular(16.r),
             border: Border.all(
               color: Theme.of(context).colorScheme.tertiary.withAlpha(25),

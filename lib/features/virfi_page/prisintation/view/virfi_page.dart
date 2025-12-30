@@ -89,7 +89,7 @@ class VirfiPage extends StatelessWidget {
                                         backgroundColor: Colors.green,
                                       ),
                                     );
-                                    Navigation.navigateTo(context, '/navbar');
+                                    Navigation.navigateTo(context, '/login');
                                   }
                                 },
                                 child: CustomButton(

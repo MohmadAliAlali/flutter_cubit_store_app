@@ -45,6 +45,7 @@ Widget buildList() {
                       );
                     },
                     child: glassCard(
+                      image: product.image,
                       descreption: product.description,
                       price: product.price,
                       titleText: product.title,

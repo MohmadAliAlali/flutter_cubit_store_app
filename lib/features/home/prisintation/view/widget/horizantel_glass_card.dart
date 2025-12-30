@@ -11,6 +11,7 @@ Widget topCurvedGlassCard({
   required double price,
   required double rate,
   required String description,
+  required String image,
   required BuildContext context,
 }) {
   final scheme = Theme.of(context).colorScheme;
@@ -47,7 +48,7 @@ Widget topCurvedGlassCard({
                 topRight: Radius.circular(16.r),
               ),
               child: Image.asset(
-                'assets/mock_data/profile.png',
+                image,
                 width: double.infinity,
                 height: 80.h, // نصف ارتفاع الكارد تقريبًا
                 fit: BoxFit.cover,
@@ -122,6 +123,7 @@ Widget horizontalCard(ProductInfoModel p, BuildContext context) {
     width: 140.w,
     height: 200.h,
     child: topCurvedGlassCard(
+      image: p.image,
       titleText: p.title,
       price: p.price,
       rate: p.rate,

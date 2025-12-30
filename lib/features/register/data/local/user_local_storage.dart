@@ -7,7 +7,7 @@ class UserLocalStorage {
   final Box _box = HiveManager.getBox(HiveBoxes.userBox);
 
   Future<void> saveUser({
-    required String id,
+    required int id,
     required String name,
     required String lastName,
     required String email,

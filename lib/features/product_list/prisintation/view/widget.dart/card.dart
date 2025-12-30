@@ -7,6 +7,7 @@ Widget glassCard({
   required String titleText,
   required double price,
   required String descreption,
+  required String image,
   required BuildContext context,
 }) {
   final scheme = Theme.of(context).colorScheme;
@@ -29,7 +30,7 @@ Widget glassCard({
           children: [
             ClipOval(
               child: Image.asset(
-                'assets/mock_data/profile.png',
+                image,
                 width: 48,
                 height: 48,
                 fit: BoxFit.cover,

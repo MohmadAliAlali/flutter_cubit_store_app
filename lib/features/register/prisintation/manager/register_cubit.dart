@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task1_cubit/features/register/data/local/user_local_storage.dart';
+import 'package:task1_cubit/features/register/repo/regiser_repo.dart';
+import 'package:task1_cubit/server/repo/api_service.dart';
 part 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
@@ -10,8 +12,23 @@ class RegisterCubit extends Cubit<RegisterState> {
   final lastName = TextEditingController();
   final password = TextEditingController();
   final UserLocalStorage _local;
+  final RegiserRepo _api = RegiserRepo(); // نفس الاستخدام السابق
 
-  // للتحقق من الحقول
+  Future<void> register({
+    required String email,
+    required String firstName,
+    required String lastName,
+    required String password,
+  }) async {
+    emit(RegisterLoading());
+
+    await _api.register(
+      email: email,
+      name: "$firstName $lastName",
+      password: password,
+    );
+  }
+
   void validateFields({
     required String email,
     required String firstName,
@@ -48,13 +65,27 @@ class RegisterCubit extends Cubit<RegisterState> {
       );
       return;
     }
-    await _local.saveUser(
-      id: '1',
-      name: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
-    );
+    try {
+      await register(
+        email: email,
+        firstName: firstName,
+        lastName: lastName,
+        password: password,
+      );
+    } catch (e) {
+      RegisterFieldError(
+        field: "server",
+        message: "'something is error check data or internet'",
+      );
+      return;
+    }
+    // await _local.saveUser(
+    //   id: '1',
+    //   name: firstName,
+    //   lastName: lastName,
+    //   email: email,
+    //   password: password,
+    // );
     emit(RegisterSuccess());
   }
 

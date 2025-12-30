@@ -10,7 +10,6 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color on = Theme.of(context).colorScheme.primary;
-    Color off = Theme.of(context).colorScheme.tertiary;
     final user = storage.getUser();
     return Scaffold(
       appBar: glassAppBar('Profile', context),
@@ -54,7 +53,7 @@ class ProfilePage extends StatelessWidget {
               SizedBox(height: 10.h),
               InfoContiner(
                 title: 'name',
-                info: '${user?['name']} ${user?['lastName']}',
+                info: '${user?['name']} }',
                 width1: 90.w,
                 width2: 223,
                 color: on,
@@ -62,7 +61,7 @@ class ProfilePage extends StatelessWidget {
               ),
               SizedBox(height: 10.h),
               InfoContiner(
-                title: 'Bearth Day ',
+                title: 'Bearth Day',
                 info: '27/7/2003',
                 width1: 140.w,
                 width2: 172,
@@ -85,7 +84,6 @@ class ProfilePage extends StatelessWidget {
                 width1: 90.w,
                 width2: 223,
                 color: on,
-                // textStyle: TextStyle(color: off),
               ),
             ],
           ),

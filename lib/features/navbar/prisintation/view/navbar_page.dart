@@ -4,7 +4,7 @@ import 'package:task1_cubit/features/home/prisintation/view/home_page.dart';
 import 'package:task1_cubit/features/navbar/prisintation/manager/navbar_cubit.dart';
 import 'package:task1_cubit/features/navbar/prisintation/view/wedgit/navbar_wid.dart';
 import 'package:task1_cubit/features/product_list/prisintation/view/list_product.dart';
-import 'package:task1_cubit/features/settings/data/prisintation/view/settings_page.dart';
+import 'package:task1_cubit/features/settings/prisintation/view/settings_page.dart';
 
 class NavbarScreen extends StatelessWidget {
   NavbarScreen({super.key});

@@ -1,6 +1,6 @@
 abstract final class AppLinks {
-  static const String baseUrl = 'https://my-backend.com/api';
-  static const bool useMock   = true;   // true = local json
+  static const String baseUrl = 'http://127.0.0.1:8000/api/';
+  static const bool useMock   = false;   // true = local json
 
   
 }

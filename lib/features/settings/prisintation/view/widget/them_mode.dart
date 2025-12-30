@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task1_cubit/features/settings/data/prisintation/manager/settings_cubit.dart';
-import 'package:task1_cubit/features/settings/data/prisintation/view/widget/button_with_icon.dart';
+import 'package:task1_cubit/features/settings/prisintation/manager/settings_cubit.dart';
+import 'package:task1_cubit/features/settings/prisintation/view/widget/button_with_icon.dart';
 
 class ThemMode extends StatelessWidget {
   const ThemMode({super.key});

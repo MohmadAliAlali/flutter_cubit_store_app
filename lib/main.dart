@@ -8,7 +8,7 @@ import 'package:task1_cubit/features/cart/prisintation/manager/cart_cubit.dart';
 import 'package:task1_cubit/features/favourites/prisintation/manager/favourites_cubit.dart';
 import 'package:task1_cubit/features/product_list/prisintation/manager/list_product_cubit.dart'
     show ListCubit;
-import 'package:task1_cubit/features/settings/data/prisintation/manager/settings_cubit.dart';
+import 'package:task1_cubit/features/settings/prisintation/manager/settings_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

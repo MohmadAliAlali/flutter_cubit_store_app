@@ -117,21 +117,34 @@ class RegisterPage extends StatelessWidget {
                               context,
                               "Registration successful! Please verify your email.",
                             );
+                          }
+                          if (state is RegisterSuccess) {
+                            Navigation.noteficationSucs(
+                              context,
+                              "Registration successful! Please verify your email.",
+                            );
                             Navigation.navigateTo(context, '/virfi');
                           }
                         },
                         child: CustomButton(
                           text: "Register",
-                          onPressed: () => cubit.validateFields(
-                            email: email.text,
-                            firstName: firstName.text,
-                            lastName: lastName.text,
-                            password: password.text,
-                          ),
+                          onPressed: () {
+                            cubit.validateFields(
+                              email: email.text,
+                              firstName: firstName.text,
+                              lastName: lastName.text,
+                              password: password.text,
+                            );
+                          },
                         ),
                       ),
                       SizedBox(height: 24.h),
-                      rowMessage(context,"Already have an account?", "Login",'/login'),
+                      rowMessage(
+                        context,
+                        "Already have an account?",
+                        "Login",
+                        '/login',
+                      ),
                       SizedBox(height: 40.h),
                     ],
                   ),
@@ -143,5 +156,4 @@ class RegisterPage extends StatelessWidget {
       ),
     );
   }
-
 }

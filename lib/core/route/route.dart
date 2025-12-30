@@ -9,7 +9,7 @@ import 'package:task1_cubit/features/product_list/prisintation/view/list_product
 import 'package:task1_cubit/features/profile/prisintation/view/profile_page.dart';
 import 'package:task1_cubit/features/register/prisintation/view/resgister_page.dart';
 import 'package:task1_cubit/features/reset_paswword/prisintation/view/rest_password_page.dart';
-import 'package:task1_cubit/features/settings/data/prisintation/view/settings_page.dart';
+import 'package:task1_cubit/features/settings/prisintation/view/settings_page.dart';
 import 'package:task1_cubit/features/splash_page/splash_page.dart';
 import 'package:task1_cubit/features/test/presentation/view/user_page.dart';
 import 'package:task1_cubit/features/virfi_page/prisintation/view/virfi_page.dart';
