@@ -19,14 +19,17 @@ class IOSLiquidNavBar extends StatelessWidget {
           height: 60.h,
           color: Colors
               .transparent, // جعل الحاوية الكبيرة شفافة تماماً وبدون تأثيرات
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly, // توزيع متساوي
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              NavItem(icon: Icons.person, index: 0, selectedIndex: current),
-              NavItem(icon: Icons.home, index: 1, selectedIndex: current),
-              NavItem(icon: Icons.settings, index: 2, selectedIndex: current),
-            ],
+          child: SizedBox(
+            width: 200.w,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // توزيع متساوي
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                NavItem(icon: Icons.person, index: 0, selectedIndex: current),
+                NavItem(icon: Icons.home, index: 1, selectedIndex: current),
+                NavItem(icon: Icons.settings, index: 2, selectedIndex: current),
+              ],
+            ),
           ),
         ),
       ),

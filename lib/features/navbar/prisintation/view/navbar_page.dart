@@ -18,7 +18,7 @@ class NavbarScreen extends StatelessWidget {
       child: BlocBuilder<NavbarCubit, int>(
         builder: (context, index) {
           return Scaffold(
-            extendBody: true, // ضروري لرؤية المحتوى خلف الأزرار الزجاجية
+            extendBody: true, 
             body: AnimatedSwitcher(
               duration: const Duration(milliseconds: 350),
               child: _screens[index],

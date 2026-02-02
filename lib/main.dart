@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,20 +10,24 @@ import 'package:task1_cubit/features/favourites/prisintation/manager/favourites_
 import 'package:task1_cubit/features/product_list/prisintation/manager/list_product_cubit.dart'
     show ListCubit;
 import 'package:task1_cubit/features/settings/prisintation/manager/settings_cubit.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await HiveManager.init();
 
   runApp(
-    MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (_) => SettingsCubit()),
-        BlocProvider(create: (_) => ListCubit()..loadListContent()),
-        BlocProvider(create: (_) => CartCubit()),
-        BlocProvider(create: (_) => FavouriteCubit()),
-      ],
-      child: const MyApp(),
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (_) => SettingsCubit()),
+          BlocProvider(create: (_) => ListCubit()..loadListContent()),
+          BlocProvider(create: (_) => CartCubit()),
+          BlocProvider(create: (_) => FavouriteCubit()),
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -39,6 +44,8 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             final cubit = context.watch<SettingsCubit>();
             return MaterialApp(
+              locale: DevicePreview.locale(context),
+              builder: DevicePreview.appBuilder,
               debugShowCheckedModeBanner: false,
               theme: AppTheme.lightTheme,
               darkTheme: AppTheme.darkTheme,
