@@ -1,102 +1,100 @@
+
 # Task1 Cubit
 
-مشروع Flutter يهدف كمثال عملي لاستخدام Cubit/Bloc لإدارة الحالة، مع ميزات مساعدة مثل التخزين المحلي عبر Hive، استدعاءات HTTP عبر Dio، وشاشات مهيأة للعرض المتجاوب.
+A Flutter project that demonstrates practical usage of Cubit/Bloc for state management, with supporting features such as local storage using Hive, HTTP requests via Dio, and responsive UI screens.
 
-## الوصف
+## Description
 
-تطبيق نموذجي منظّم بمسارات وطبقة عرض/منطق (presentation/manager)، يستخدم `flutter_bloc` (Cubit) لإدارة الحالة، ويستعمل `Hive` للتخزين المحلي، و`dio` للتعامل مع الشبكات. المشروع يحتوي على أجزاء رئيسية مثل: شريط تنقّل سفلي، قائمة منتجات، سلة مشتريات، عناصر مفضلة، وإعدادات.
+A sample application organized with clear routing and presentation/manager layers. It uses `flutter_bloc` (Cubit) for state management, `Hive` for local storage, and `dio` for networking. The project includes main features like: a custom bottom navigation bar, product list, shopping cart, favorites, and settings.
 
-## الميزات الرئيسية
+## Main Features
 
-- إدارة حالة باستخدام `flutter_bloc` (Cubits).
-- تخزين محلي سريع عبر `hive` و `hive_flutter`.
-- اتصالات شبكية عبر `dio` مع `pretty_dio_logger` للتصحيح.
-- شريط تنقّل سفلي مخصص (`persistent_bottom_nav_bar`، مع تنفيذ مظهر Liquid iOS بسيط).
-- دعم شاشات متجاوبة عبر `flutter_screenutil`.
-- دعم Device Preview أثناء التطوير.
+- State management using `flutter_bloc` (Cubits).
+- Fast local storage with `hive` and `hive_flutter`.
+- Network requests via `dio` with `pretty_dio_logger` for debugging.
+- Custom bottom navigation bar (`persistent_bottom_nav_bar`), with a simple iOS Liquid style implementation.
+- Responsive design support using `flutter_screenutil`.
+- Device Preview support during development.
 
-## المتطلبات
+## Requirements
 
 - Flutter SDK >= 3.9.2
-- Dart SDK متوافق (مذكور في `pubspec.yaml`).
+- Compatible Dart SDK (see `pubspec.yaml`).
 
-## التثبيت والتشغيل
+## Installation & Running
 
-1. استنساخ المستودع:
+1. Clone the repository:
 
-   `git clone <repository-url>`
+   `git clone git@github.com:MohmadAliAlali/flutter_cubit_store_app.git`
 
-2. الدخول للمجلد:
+2. Navigate to the project folder:
 
    `cd "Flutter Project/2025 project/task1_cubit"`
 
-3. تثبيت الحزم:
+3. Install dependencies:
 
    `flutter pub get`
 
-4. إذا كنت تستخدم Hive مع مولد النماذج، شغّل:
+4. If you use Hive with code generation, run:
 
    `flutter pub run build_runner build --delete-conflicting-outputs`
 
-5. تشغيل التطبيق:
+5. Run the app:
 
    `flutter run`
 
-ملاحظة: أثناء التطوير يتم تفعيل `DevicePreview` تلقائيًا عندما لا يكون التطبيق في وضع الإصدار.
+Note: `DevicePreview` is enabled by default in development mode (not in release).
 
-## بنية المشروع (مختصر)
+## Project Structure (Summary)
 
-- `lib/main.dart` — نقطة دخول التطبيق، تهيئة Hive و MultiBlocProvider.
-- `lib/core/` — إعدادات عامة: `route`, `storage`, `style`, `navigation`, إلخ.
-- `lib/features/` — المكونات الوظيفية مقسمة حسب الميزة، كل ميزة تحتوي على `presentation` (شاشات/ويدجت/مدراء الحالة) وربما `data`/`domain`.
-  - مثال: `features/navbar/prisintation/view/wedgit/navbar_wid.dart` يحتوي على تنفيذ شريط التنقل السفلي الخاص بنظام iOS بشكل Liquid بسيط.
-- `assets/` — بيانات تجريبية وملفات ثابتة مثل `mock_data/users.json`.
+- `lib/main.dart` — App entry point, Hive initialization, MultiBlocProvider setup.
+- `lib/core/` — General settings: `route`, `storage`, `style`, `navigation`, etc.
+- `lib/features/` — Functional modules by feature, each with `presentation` (screens/widgets/cubits) and possibly `data`/`domain`.
+  - Example: `features/navbar/prisintation/view/wedgit/navbar_wid.dart` implements a custom iOS-style Liquid bottom navigation bar.
+- `assets/` — Mock data and static files like `mock_data/users.json`.
 
-## الحزم المستخدمة (أساسية من `pubspec.yaml`)
+## Main Packages (from `pubspec.yaml`)
 
-- `flutter_bloc` — إدارة الحالة.
-- `dio`, `pretty_dio_logger` — اتصالات HTTP ومعالجة السجلات.
-- `hive`, `hive_flutter`, `hive_generator` — تخزين محلي ومولدات.
-- `flutter_screenutil` — دعم التصميم المتجاوب.
-- `persistent_bottom_nav_bar` — عناصر شريط التنقل السفلي.
-- `device_preview` — معاينة الجهاز أثناء التطوير.
+- `flutter_bloc` — State management.
+- `dio`, `pretty_dio_logger` — HTTP requests and logging.
+- `hive`, `hive_flutter`, `hive_generator` — Local storage and code generation.
+- `flutter_screenutil` — Responsive design support.
+- `persistent_bottom_nav_bar` — Bottom navigation bar widgets.
+- `device_preview` — Device preview during development.
 
-## نصائح تطويرية
+## Development Tips
 
-- تفعيل وضع التصحيح في `DevicePreview` مفيد أثناء تطوير واجهات متعددة الدقات.
-- حافظ على تشغيل `build_runner` بعد تعديل نماذج Hive لتحديث المحولات.
-- استخدم `BlocProvider` و`Cubit` للفصل الواضح بين العرض والمنطق.
+- Enable `DevicePreview` for easier multi-resolution UI development.
+- Run `build_runner` after editing Hive models to update adapters.
+- Use `BlocProvider` and `Cubit` for clear separation of UI and logic.
 
-## اختبار
+## Testing
 
-تشغيل اختبارات الوحدة (إن وُجدت):
+To run unit tests (if available):
 
 `flutter test`
 
-## بيانات تجريبية
+## Mock Data
 
-المشروع يحتوي على ملف تجريبي: `assets/mock_data/users.json` يمكن استخدامه لملء واجهات الاختبار أو المحاكاة.
+The project includes a mock data file: `assets/mock_data/users.json` for testing or simulation purposes.
 
-## المساهمة
+## Contribution
 
-مرحب بالمساهمات: افتح Issues أو Pull Requests مع وصف واضح للتغييرات وكيفية اختبارها.
+Contributions are welcome! Open Issues or Pull Requests with a clear description of your changes and how to test them.
 
-## الترخيص
+## License
 
-أضف رخصة هنا حسب اختيارك (مثلاً: MIT). إذا لم تحدد رخصة، افترض أن المشروع خاص.
+Add your preferred license here (e.g., MIT). If not specified, assume the project is private.
 
 ---
 
-ملفات مهمة:
+Key Files:
 
 - [pubspec.yaml](pubspec.yaml)
 - [lib/main.dart](lib/main.dart)
 - [lib/features/navbar/prisintation/view/wedgit/navbar_wid.dart](lib/features/navbar/prisintation/view/wedgit/navbar_wid.dart)
 
-إذا رغبت، أستطيع تحديث README ليشمل أمثلة استخدام أكثر تفصيلاً لكل Cubit أو إضافة قسم توضيحي للـ routes وتهيئة Hive.
-# task1_cubit
-
-A new Flutter project.
+If you want, I can update the README to include more detailed usage examples for each Cubit or add a section explaining routes and Hive setup.
 
 ## Getting Started
 
